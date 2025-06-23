@@ -6,6 +6,7 @@ body {
     padding: 0;
     color: #333;
     overflow: auto;
+    user-select: none;
 }
 
 h2 {
