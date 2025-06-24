@@ -23,13 +23,13 @@
 }
 
         const check = confirm("Are you sure you want to submit!!");
-        const match=students.find(s=>s.studentName===name && s.adm===admNo);
+        const match=students.find(s=>s.adm===admNo);
         
         
 
   if (match && department==="ict" && level===300 && study===5) {
            submittedAdms.add(admNo);
-             document.getElementById('prom').innerHTML = `✅✅  ${name.toUpperCase()} you have submitted successfully`;
+             document.getElementById('prom').innerHTML = `✅✅  ${name.toUpperCase()} you are a Current student!!`;
 
     const data = {
             name: name.toUpperCase(),
@@ -43,16 +43,14 @@
             method: 'POST',
             body: JSON.stringify(data)
     })
-            .then(response => console.log("Success!", response))
-            .catch(error => console.error("Error!", error.message));
-
+           
     
    
   } 
    
 
   else {
-        alert(`${name} with Admission No. ${admNo} not found in the record!`);
+        alert(`${name} with Admission No. ${admNo} not found in our record!`);
 
   }
 
